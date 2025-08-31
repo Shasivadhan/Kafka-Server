@@ -50,12 +50,16 @@ Now, check for the Java Installation by running the following command in cmd.
 ## Step 4: Start ZooKeeper
 Open a command prompt in `C:\kafka` and run the following command:
 
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
 ![zookeeper start cmd](https://miro.medium.com/v2/resize:fit:498/1*NamUTslnU3suk9nmMq--ow.png)
 
 ---
 
 ## Step 5: Start Kafka server
 Open another command prompt in `C:\kafka` and run the following command:
+
+.\bin\windows\kafka-server-start.bat .\config\server.properties
 
 ![kafka server start cmd](https://miro.medium.com/v2/resize:fit:458/1*2aE08xqb6-o3v891QlSWQA.png)
 
