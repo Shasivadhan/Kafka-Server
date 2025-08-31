@@ -5,7 +5,7 @@
 
 ---
 
-## Step 1: Donwload Kafka zip file
+## Step 1: Download Kafka zip file
 Please go to the website https://kafka.apache.org/downloads ,and click on latest version “Binary download”. At the time of creating this tutorial, the latest version is 2.5.0.
 
 ![Kafka downloads page](https://miro.medium.com/v2/resize:fit:487/1*mY7nG1aIRWRr6Gpfx7gEMw.png)
@@ -87,8 +87,6 @@ You can see all messages which you send from Kafka producer (as follows).
 ![consumer output](https://miro.medium.com/v2/resize:fit:576/1*jrou8zbhiHy-xU1p1NaPuA.png)
 
 If you see those messages, then your Kafka is installed successfully and running successfully.
-
-![success image](https://miro.medium.com/v2/resize:fit:700/0*iuKAGR5OsxyKeOBx.jpg)
 
 ---
 
