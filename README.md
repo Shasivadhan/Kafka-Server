@@ -3,8 +3,6 @@
 **Title:** Installing Kafka on Windows  
 **Author:** KAKARA SHASI VADHAN
 
-![Cover](https://miro.medium.com/v2/resize:fit:512/0*fVF-M1UK6HCLiBlJ)
-
 ---
 
 ## Step 1: Donwload Kafka zip file
