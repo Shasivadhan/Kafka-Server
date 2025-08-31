@@ -1,4 +1,6 @@
-# Installing Kafka on Windows (Article Snapshot)
+[![YouTube Channel](https://img.shields.io/badge/YouTube-KSVTech-red?logo=youtube)](https://www.youtube.com/@KsvTech)
+
+# Installing Kafka on Windows (Article With Snapshots)
 
 **Title:** Installing Kafka on Windows  
 **Author:** KAKARA SHASI VADHAN
