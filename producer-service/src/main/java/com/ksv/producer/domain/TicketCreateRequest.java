@@ -1,0 +1,1 @@
+package com.ksv.producer.domain; import jakarta.validation.constraints.*; public record TicketCreateRequest(@NotBlank String customerId,@NotBlank String title,@Min(1) int priority) {}

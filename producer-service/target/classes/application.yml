@@ -1,0 +1,17 @@
+server:
+  port: 8081
+app:
+  topics:
+    ticket-created: ticket.created.v1
+    ticket-created-dlt: ticket.created.v1-dlt
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      properties:
+        spring.json.add.type.headers: false
+        partitioner.class: com.ksv.producer.kafka.ReverseKeyPartitioner
+      acks: all
+      enable-idempotence: true

@@ -1,0 +1,6 @@
+printf "%s\n" \
+"target/" \
+".idea/" "*.iml" ".project" ".classpath" ".settings/" \
+".DS_Store" "Thumbs.db" \
+"*.log" "out/" "*.zip" \
+"**/.env" \

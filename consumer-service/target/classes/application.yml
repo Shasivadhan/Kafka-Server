@@ -1,0 +1,21 @@
+server:
+  port: 8082
+
+app:
+  topics:
+    ticket-created: ticket.created.v1
+    ticket-created-dlt: ticket.created.v1-dlt
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ticket-consumer-ksv
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+        spring.json.value.default.type: com.ksv.consumer.domain.TicketCreatedEvent
+      auto-offset-reset: earliest
+    listener:
+      ack-mode: manual

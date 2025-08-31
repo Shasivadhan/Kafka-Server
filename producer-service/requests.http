@@ -1,0 +1,8 @@
+POST http://localhost:8081/api/tickets
+Content-Type: application/json
+
+{
+  "customerId": "cust-101",
+  "title": "New ticket from web",
+  "priority": 3
+}
