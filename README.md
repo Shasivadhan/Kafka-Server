@@ -117,15 +117,17 @@ If you’re using the Spring Boot microservices from this repo:
   "title": "New ticket from web",
   "priority": 3
 }
-Expected response (HTTP 202):
+```
+**3) Expected response (HTTP 202):**
+
+```json
 
 {
   "topic": "ticket.created.v1",
   "eventId": "....",
   "correlationId": "...."
 }
-
-
-See it on the consumer – Open the consumer-service Run console in IntelliJ; you should see:
+```
+**4) See it on the consumer – Open the consumer-service Run console in IntelliJ; you should see:**
 
 [consumer] id=<uuid> corr=<id> key=cust-101 p=3 title=New ticket from web
