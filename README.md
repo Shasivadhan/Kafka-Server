@@ -94,5 +94,38 @@ If you see those messages, then your Kafka is installed successfully and running
 
 ---
 
-## Attribution
-This snapshot reproduces content **you provided** from the Medium article by *Anil Kumar Kanasani*. If you publish this in a public repo, consider adding a clear credit and link to the original article, or obtain permission from the author.
+## Produce with Postman <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman" width="22" height="22" /> and see it in your Spring Boot consumer
+
+If you’re using the Spring Boot microservices from this repo:
+
+- **producer-service** (HTTP on **8081**) publishes to Kafka topic **`ticket.created.v1`**
+- **consumer-service** (runs on **8082**) listens to **`ticket.created.v1`** and logs messages in its IntelliJ **Run** console
+
+**1) Start services**
+1. Ensure Kafka is running (from Step 5 or via Docker Compose).
+2. Run **consumer-service** (8082) in IntelliJ.
+3. Run **producer-service** (8081) in IntelliJ.
+
+**2) Send a message with Postman**
+- **Method:** `POST`  
+- **URL:** `http://localhost:8081/api/tickets`  
+- **Headers:** `Content-Type: application/json`  
+- **Body (raw JSON):**
+```json
+{
+  "customerId": "cust-101",
+  "title": "New ticket from web",
+  "priority": 3
+}
+Expected response (HTTP 202):
+
+{
+  "topic": "ticket.created.v1",
+  "eventId": "....",
+  "correlationId": "...."
+}
+
+
+See it on the consumer – Open the consumer-service Run console in IntelliJ; you should see:
+
+[consumer] id=<uuid> corr=<id> key=cust-101 p=3 title=New ticket from web
